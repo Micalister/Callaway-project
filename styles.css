@@ -1,0 +1,453 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC|Roboto:300,400&display=swap');
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header */
+header{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signature{
+    color: #384147;
+    text-align: center;
+    user-select: none;
+}
+
+.callaway {
+  font-weight: 900;
+}
+
+.signature-heading{
+    font-family: 'Playfair Display SC', cursive;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+.signature-subhead{
+    font-family: 'Playfair Display SC', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    letter-spacing: 2rem;
+}
+
+/* NavBar */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.link {
+  font-family: 'Playfair Display SC', sans-serif;
+  padding: .5rem .8rem;
+  font-size: 1rem;
+  color: #384147;
+  transition: .5s;
+}
+
+.link:hover{
+    color: inherit;
+    opacity: .5;
+    transition: .5s;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar-nav{
+    padding: 20px;
+}
+
+/* Description */
+.about-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-description{
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    outline: 1px solid rgba(56, 65, 71, 0.5);
+    outline-offset: -5px;
+    order: 2;
+    margin-top: 1rem;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-family: 'Playfair Display SC', cursive;
+}
+
+.signature p {
+  font-size: 0.8rem;
+}
+
+.about-image{
+    order: 1;
+}
+
+.about-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Gallery */
+
+.gallery {
+  margin-top: 10rem;
+}
+
+.section-heading{
+    position: relative;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.section-header::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(56, 65, 71, 0.5);
+  width: 1px;
+  height: 50px;
+  border-radius: 8px;
+  margin: 3rem 0;
+}
+
+.section-heading::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(56, 65, 71, 0.5);
+    width: 1px;
+    height: 50px;
+    top: 53px;
+    border-radius: 8px;
+}
+
+.heading-title{
+    font-family: 'Playfair Display SC', sans-serif;
+    text-transform: uppercase;
+    color: #384147;
+    font-size: 2rem;
+}
+
+.lightbox-content{
+    position: relative;
+    overflow: hidden;
+}
+
+.img-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+.lightbox-content img{
+    transition: transform 2s;
+}
+
+.lightbox-content:hover img{
+    transform: scale(1.2);
+}
+
+.lightbox-content a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: background-color .5s;
+}
+.lightbox-content a:hover::before{
+    background-color: rgba(0,0,0,.7);
+}
+
+.lightbox-content a::after{
+    font-family: 'Font Awesome 5 Free';
+    content: "\f00e";
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 25px;
+    z-index: 101;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.lightbox-content a:hover::after{
+    opacity: .5;
+}
+
+/* About */
+
+.description-title {
+  margin-top: 2rem;
+  font-family: 'Playfair Display SC', sans-serif;
+  text-transform: uppercase;
+  color: #384147;
+  font-size: 2rem;
+}
+
+.description {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px;
+  outline: 1px solid rgba(56, 65, 71, 0.5);
+  outline-offset: -5px;
+  order: 2;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+.description-text{
+  font-size: 0.8rem;
+}
+
+
+/* Footer */
+
+footer{
+    background-color: #151515;
+    text-align: center;
+}
+
+.ending-heading {
+  font-family: 'Playfair Display SC', cursive;
+  font-size: 3rem;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.ending-subhead {
+  font-family: 'Playfair Display SC', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 2rem;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 400px) {
+
+  .signature-heading {
+    font-size: 4rem;
+  }
+
+  .signature-subhead {
+    font-size: 2rem;
+  }
+
+  .link {
+    font-size: 1.4rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .signature p {
+    font-size: 1rem;
+  }
+
+  .heading-title {
+    font-size: 2.5rem;
+  }
+
+  .description-title {
+    font-size: 2.5rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+  }
+
+  .ending-heading {
+    font-size: 4rem;
+  }
+
+  .ending-subhead {
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .about-content{
+        position: relative;
+        display: block;
+    }
+
+    .about-description{
+        position: absolute;
+        top: 80%;
+        transform: translateY(-50%);
+        width: 60%;
+        outline-offset: -10px;
+    }
+
+    .about-image img{
+        width: 70%;
+        margin-left: auto;
+    }
+
+    .lightboxOverlay{
+        overflow: hidden;
+    }
+
+    .signature-heading {
+      font-size: 5rem;
+    }
+
+    .signature-subhead {
+      font-size: 3rem;
+    }
+
+    .link {
+      font-size: 1.8rem;
+    }
+
+    .about-title {
+      font-size: 3rem;
+    }
+
+    .signature p {
+      font-size: 1.2rem;
+    }
+
+    .heading-title {
+      font-size: 3rem;
+    }
+
+    .description-title {
+      font-size: 3rem;
+    }
+
+    .description-text {
+      font-size: 1.2rem;
+    }
+
+    .ending-heading {
+      font-size: 5rem;
+    }
+
+    .ending-subhead {
+      font-size: 3rem;
+    }
+
+    .section-header::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(56, 65, 71, 0.5);
+      width: 1px;
+      height: 50px;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .about-description{
+        top: 50%;
+        width: 40%;
+    }
+
+    .about-image img{
+        width: 80%;
+    }
+
+    .lb-close{
+        position: absolute;
+        float: none;
+        top: -20px;
+        right: 30px;
+    }
+
+    .signature-heading {
+      font-size: 7rem;
+    }
+
+    .signature-subhead {
+      font-size: 4rem;
+    }
+
+    .link {
+      font-size: 2rem;
+    }
+
+    .about-title {
+      font-size: 3.5rem;
+    }
+
+    .signature p {
+      font-size: 1.5rem;
+    }
+
+    .heading-title {
+      font-size: 3.5rem;
+    }
+
+    .description-title {
+      font-size: 3.5rem;
+    }
+
+    .description-text {
+      font-size: 1.5rem;
+    }
+
+    .ending-heading {
+      font-size: 7rem;
+    }
+
+    .ending-subhead {
+      font-size: 4rem;
+    }
+
+    .section-header::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(56, 65, 71, 0.5);
+      width: 1px;
+      height: 50px;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+}
